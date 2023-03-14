@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat&family=Outfit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+#conteudo {
+    width: 495px;
+    height: 370px;
+    display: flex;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagemPrincipal {
+    height: 370px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.imagemMobile {
+    display: none;
+}
+
+.anuncioSection {
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.paragrafo {
+    opacity: 0.6;
+    font-family: 'MontSerrat';
+    font-weight: 400;
+}
+
+.code {
+    letter-spacing: 3px;
+}
+
+.tituloAnuncio {
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.preco {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.botao {
+    padding: 10px;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    font-family: 'MontSerrat';
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    #conteudo {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 90vh;
+    }
+
+    .imagemPrincipal {
+        display: none;
+    }
+
+    .imagemMobile {
+        display: block;
+        width: 400px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .anuncioSection {
+        border-radius: 0 0 15px 15px;
+    }
+}
